@@ -1,0 +1,39 @@
+\documentclass[10pt,a4paper,landscape,final,oneside,openany,twocolumn]{memoir}
+
+\usepackage{abll}
+
+\usepackage[left=3.6cm, right=3.6cm, top=2.7cm, bottom=2.7cm]{geometry}
+
+\setlength{\parindent}{0pt}
+\pagestyle{cleared}
+
+\setcounter{secnumdepth}{0}
+\def\thechapter{}
+\setcolsepandrule{7.2cm}{0pt}
+
+
+\newcommand{\songtitle}[1]{\section{\huge{#1}}\vspace*{3mm}}
+
+\usepackage{pstricks}
+\newrgbcolor{abllcolor}{.3 .4 .8}
+\newcommand{\abll}[1]{{\textbf{\abllcolor{[abll: #1]}}}}
+
+			
+\begin{document}
+
+\input{forside}
+\newpage
+\input{imorgenerverdenvor}
+\newpage
+\input{hjemmehackeriet}
+\newpage
+\input{fulbertogbeatrice}
+\newpage
+\input{saalaengejeglaeser}
+\newpage
+\input{bonusopgaver}
+\newpage
+\input{bagside}
+
+\end{document}
+
