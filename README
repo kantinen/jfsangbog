@@ -1,8 +1,5 @@
 LaTeX kilde for julefrokostsangbogen.
 
-De nuværende filer bruger Lindbos eget hjemmehack. Jeg lavede en version sidste
-år, som brugte pdfpages, men fik ikke committed den før mit system døde. Jeg
-mener at den brugte et approach som det på
-http://www.mostlymaths.net/2008/09/latex-booklets.html så hvis dette ikke
-virker, så prøv at bruge pdfpages.
-- Søren
+2013 mappen har en booklet.tex fil, der laver den som en booklet. Den skal
+printes med duplex, hvilket er -o sides=two-sided-long-edge (eller short-edge
+måske. Dunno hvad der er rigtigt).

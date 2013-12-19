@@ -15,14 +15,6 @@ compile:
 	$(COMPILE) && $(COMPILE)
 	$(COMPILE2) && $(COMPILE2)
 
-bibtex: compile
-	cd $(OUTDIR)
-	bibtex $(FILENAME).aux
-	cd $(CURDIR)
-
-print:
-	cat $(OUTFILE) | ssh ask.diku.dk lpr -P m1b
-
 clean:
 	rm -r $(OUTDIR)
 
