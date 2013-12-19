@@ -1,0 +1,176 @@
+\ProvidesPackage{abll}
+
+\chapterstyle{hangnum}
+
+
+% BASIC PACKAGES
+%\usepackage{eso-pic,fix-cm,ae,aecompl,ifthen}         
+\usepackage[english,american,danish]{babel}    % last language decides document language!
+\usepackage[utf8x]{inputenc}          % text encoding
+\usepackage{amsmath,amssymb, amsbsy}  % math
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{microtype}                % awesome typography
+
+
+% MISC. PACKAGES
+%\usepackage{pdflscape}               % \begin{landscape} \end{landscape}
+%\usepackage{semantic}                % good for proof trees and math ligatures
+%\usepackage[noend]{algorithmic}      % algorithms as clrs
+\usepackage[draft]{fixme}	            % \fixme{blabla}.
+\usepackage{multirow}                 % \multirow{num_rows}{width}{contents}
+
+% FONT
+\usepackage[T1]{fontenc}
+\usepackage{palatino}                 % font : garamond
+\linespread{1.05}                     % palatino is best with more leading
+\usepackage{bera}                     % alternative monospace font
+%\renewcommand{\ttdefault}{cmtt}      % alternative monospace font
+%\renewcommand{\rmdefault}{ugm}       % alternative monospace font
+\usepackage[sc]{mathpazo}             % more stylized math
+%\usepackage{euler}                   % weirdo math
+
+
+% PAGE DIMENSIONS
+%\usepackage[left=4.5cm, right=4.5cm, top=4.4cm, bottom=4.5cm]{geometry}
+
+
+% HEADERS
+\makepagestyle{myheadings}
+%\makepsmarks{myheadings}{
+%  \def\chaptermark##1{\markboth{%
+%    \ifnum \value{secnumdepth} < -1
+%      \if@mainmatter
+%        \chaptername\ \thechapter\ --- %
+%      \fi
+%    \fi
+%    ##1}{}}
+
+%  \def\sectionmark##1{\markright{%
+%    \ifnum \value{secnumdepth} < 0
+%      \thesection. \ %
+%    \fi
+%    ##1}}
+%}
+%%\makeevenhead{myheadings}{\thechapter\hskip.3cm\vrule\hskip.3cm \leftmark}{}{}
+%\makeoddhead{myheadings}{}{}{\leftmark\hskip.3cm\vrule\hskip.3cm\thechapter}
+%%\makeoddhead{myheadings}{}{}{\rightmark\hskip.3cm\vrule\hskip.3cm\thesection}
+%\makeevenfoot{myheadings}{}{\thepage}{}
+%\makeoddfoot{myheadings}{}{\thepage}{}
+%\pagestyle{myheadings}
+
+% customize chapter pages
+
+%\makepagestyle{myheadingschapterpage}
+%  \makeevenfoot{myheadingschapterpage}{}{}{\thepage}
+%  \makeoddfoot{myheadingschapterpage}{}{}{\thepage}
+%\aliaspagestyle{chapter}{myheadingschapterpage}
+%\aliaspagestyle{title}{myheadingschapterpage}
+%\makeevenfoot{myheadings}{}{}{\thepage}
+%\makeoddfoot{myheadings}{}{}{\thepage}
+%\pagestyle{myheadings}
+
+
+
+% PDF OUTPUT
+\usepackage{hyperref}
+\hypersetup{
+%  unicode=true,           % non-Latin characters in Acrobat’s bookmarks
+%  pdftitle={My title},
+%  pdfauthor={Author},
+%  pdfsubject={Subject},
+%  pdfkeywords={keywords},
+%  pdfnewwindow=true,      % open links in new window
+  colorlinks=true,         % false: boxed links; true: colored links
+  linkcolor=black,         % color of internal links
+  citecolor=black,         % color of links to bibliography
+  filecolor=black,         % color of file links
+  urlcolor=black           % color of external links
+}
+
+
+% SECTION TITLES
+\def\thefigure{\arabic{figure}}
+%\def\thesection{\arabic{section}}
+%\def\thesubsection{\thesection.\arabic{subsection}}
+%\def\thesubsubsection{\alph{subsubsection}.}
+% \alph \roman \arabin
+%\setcounter{secnumdepth}{3}
+%\setcounter{tocdepth}{3}
+
+
+% USER DEFINED COMMANDS AND ENVIRONMENTS
+%\newcommand{\codevar}[1]{{\tt{\it #1}}}
+%\newcommand{\genericleft}{\langle\hspace{-2.6pt}\vert}  % prints [[
+%\newcommand{\genericright}{\vert\hspace{-2.6pt}\rangle} % prints ]]
+%\newcommand{\generic}[1]{\genericleft #1 \genericright^{\varepsilon}}
+\newcommand{\imgwidth}{.85\textwidth}
+\newcommand{\twocolimgwidht}{.48\textwidth}
+\newcommand{\threecolimgwidht}{.32\textwidth}
+\newcommand{\inftyint}{\int_{-\infty}^{\infty}}
+\renewcommand\vec[1]{\boldsymbol{#1}}
+
+% CUSTOM ITEM LIST
+\newcounter{num}
+\newenvironment{enumerate-compact}{
+   \begin{list}
+   {\arabic{num}.}
+   {\usecounter{num}
+      \addtolength{\leftmargin}{\labelsep}
+      \setlength{\topsep}{1ex}
+      \setlength{\itemsep}{1mm}
+      \setlength{\parsep}{0ex}}
+}
+{\end{list}}
+\newenvironment{itemize-compact}{
+   \begin{list}
+   {$\bullet$}
+   { \addtolength{\leftmargin}{\labelsep}
+      \setlength{\topsep}{1ex}
+      \setlength{\itemsep}{1mm}
+      \setlength{\parsep}{0ex}}
+}
+{\end{list}}
+
+% FIGURE CAPTIONS
+% either \subfloat[][]
+%\usepackage[labelformat=empty]{subfig}
+% or \subbottom[]
+\newsubfloat{figure}
+\usepackage{sidecap} % side captions: \begin{SCfigure}[2.7][ht] ...
+\usepackage{caption}
+\captionsetup{margin=0pt, font=small, labelfont=bf, format=hang}
+\setlength{\abovecaptionskip}{0pt}
+\setlength{\belowcaptionskip}{0pt}
+
+
+% LINE SPACING
+%\usepackage{setspace}
+% EXAMPLE:
+% \singlespacing, \onehalfspacing, \doublespacing, \setstretch{x}
+
+
+% INCLUDE PROGRAM CODE
+\usepackage{listings}
+\lstset{
+       language=Matlab,        % C, Java, Matlab, SML
+       numbers=left,           % where to put the line-numbers
+       numberstyle=\tiny,      % size and font of line-numbers
+       stepnumber=1,           % step between two line-numbers.
+       numbersep=10pt,         % distance between line-numbers and the code
+       basicstyle= \ttfamily \footnotesize,  % size and fonts of the code
+       breaklines=true,        % wrap lines?
+       showstringspaces=false, % underline spaces within strings
+       tabsize=2,              % replace tabs with # of spaces
+       identifierstyle=\color{Black},
+       keywordstyle=\color{MidnightBlue}\bfseries,
+       stringstyle=\color{OliveGreen},
+       commentstyle=\color{Gray},
+       inputencoding=utf8x,    % text encoding
+       extendedchars=true,     % exotic characters?
+       frame=none,             % [none, single, double]
+       xleftmargin=5mm,
+}
+% \begin{lstlisting} your code here \end{lstlisting}
+% \lstinputlisting{filename}
+
