@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2013.9.24)  19 DEC 2013 21:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2013.9.24)  20 DEC 2013 14:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -235,7 +235,7 @@ Package pdftex.def Info: output/sanghaefte13.pdf, page1 used on input line 5.
 
  <./output/sanghaefte13.pdf{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}>
  <./output/sanghaefte13.pdf>]
-<output/sanghaefte13.pdf, id=32, page=11, 421.10124pt x 597.50829pt>
+<output/sanghaefte13.pdf, id=23, page=11, 421.10124pt x 597.50829pt>
 File: output/sanghaefte13.pdf Graphic file (type pdf)
 
 <use output/sanghaefte13.pdf, page 11>
@@ -246,7 +246,7 @@ File: output/sanghaefte13.pdf Graphic file (type pdf)
 Package pdftex.def Info: output/sanghaefte13.pdf, page11 used on input line 5.
 (pdftex.def)             Requested size: 421.4536pt x 598.00826pt.
 
-<output/sanghaefte13.pdf, id=33, page=2, 421.10124pt x 597.50829pt>
+<output/sanghaefte13.pdf, id=24, page=2, 421.10124pt x 597.50829pt>
 File: output/sanghaefte13.pdf Graphic file (type pdf)
 
 <use output/sanghaefte13.pdf, page 2>
@@ -267,7 +267,7 @@ Package pdftex.def Info: output/sanghaefte13.pdf, page2 used on input line 5.
 (pdftex.def)             Requested size: 421.4536pt x 598.00826pt.
 
 [2 <./output/sanghaefte13.pdf> <./output/sanghaefte13.pdf>]
-<output/sanghaefte13.pdf, id=62, page=10, 421.10124pt x 597.50829pt>
+<output/sanghaefte13.pdf, id=48, page=10, 421.10124pt x 597.50829pt>
 File: output/sanghaefte13.pdf Graphic file (type pdf)
 
 <use output/sanghaefte13.pdf, page 10>
@@ -278,7 +278,7 @@ File: output/sanghaefte13.pdf Graphic file (type pdf)
 Package pdftex.def Info: output/sanghaefte13.pdf, page10 used on input line 5.
 (pdftex.def)             Requested size: 421.4536pt x 598.00826pt.
 
-<output/sanghaefte13.pdf, id=63, page=3, 421.10124pt x 597.50829pt>
+<output/sanghaefte13.pdf, id=49, page=3, 421.10124pt x 597.50829pt>
 File: output/sanghaefte13.pdf Graphic file (type pdf)
 
 <use output/sanghaefte13.pdf, page 3>
@@ -299,7 +299,7 @@ Package pdftex.def Info: output/sanghaefte13.pdf, page3 used on input line 5.
 (pdftex.def)             Requested size: 421.4536pt x 598.00826pt.
 
 [3 <./output/sanghaefte13.pdf> <./output/sanghaefte13.pdf>]
-<output/sanghaefte13.pdf, id=72, page=9, 421.10124pt x 597.50829pt>
+<output/sanghaefte13.pdf, id=63, page=9, 421.10124pt x 597.50829pt>
 File: output/sanghaefte13.pdf Graphic file (type pdf)
 
 <use output/sanghaefte13.pdf, page 9>
@@ -310,7 +310,7 @@ File: output/sanghaefte13.pdf Graphic file (type pdf)
 Package pdftex.def Info: output/sanghaefte13.pdf, page9 used on input line 5.
 (pdftex.def)             Requested size: 421.4536pt x 598.00826pt.
 
-<output/sanghaefte13.pdf, id=73, page=4, 421.10124pt x 597.50829pt>
+<output/sanghaefte13.pdf, id=64, page=4, 421.10124pt x 597.50829pt>
 File: output/sanghaefte13.pdf Graphic file (type pdf)
 
 <use output/sanghaefte13.pdf, page 4>
@@ -331,7 +331,7 @@ Package pdftex.def Info: output/sanghaefte13.pdf, page4 used on input line 5.
 (pdftex.def)             Requested size: 421.4536pt x 598.00826pt.
 
 [4 <./output/sanghaefte13.pdf> <./output/sanghaefte13.pdf>]
-<output/sanghaefte13.pdf, id=82, page=8, 421.10124pt x 597.50829pt>
+<output/sanghaefte13.pdf, id=78, page=8, 421.10124pt x 597.50829pt>
 File: output/sanghaefte13.pdf Graphic file (type pdf)
 
 <use output/sanghaefte13.pdf, page 8>
@@ -342,7 +342,7 @@ File: output/sanghaefte13.pdf Graphic file (type pdf)
 Package pdftex.def Info: output/sanghaefte13.pdf, page8 used on input line 5.
 (pdftex.def)             Requested size: 421.4536pt x 598.00826pt.
 
-<output/sanghaefte13.pdf, id=83, page=5, 421.10124pt x 597.50829pt>
+<output/sanghaefte13.pdf, id=79, page=5, 421.10124pt x 597.50829pt>
 File: output/sanghaefte13.pdf Graphic file (type pdf)
 
 <use output/sanghaefte13.pdf, page 5>
@@ -363,7 +363,7 @@ Package pdftex.def Info: output/sanghaefte13.pdf, page5 used on input line 5.
 (pdftex.def)             Requested size: 421.4536pt x 598.00826pt.
 
 [5 <./output/sanghaefte13.pdf> <./output/sanghaefte13.pdf>]
-<output/sanghaefte13.pdf, id=87, page=7, 421.10124pt x 597.50829pt>
+<output/sanghaefte13.pdf, id=83, page=7, 421.10124pt x 597.50829pt>
 File: output/sanghaefte13.pdf Graphic file (type pdf)
 
 <use output/sanghaefte13.pdf, page 7>
@@ -374,7 +374,7 @@ File: output/sanghaefte13.pdf Graphic file (type pdf)
 Package pdftex.def Info: output/sanghaefte13.pdf, page7 used on input line 5.
 (pdftex.def)             Requested size: 421.4536pt x 598.00826pt.
 
-<output/sanghaefte13.pdf, id=88, page=6, 421.10124pt x 597.50829pt>
+<output/sanghaefte13.pdf, id=84, page=6, 421.10124pt x 597.50829pt>
 File: output/sanghaefte13.pdf Graphic file (type pdf)
 
 <use output/sanghaefte13.pdf, page 6>
@@ -407,15 +407,14 @@ Here is how much of TeX's memory you used:
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/mathpazo/fplmr.pfb></usr/share/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb>
-</usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-di
-st/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/
-palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
->
-Output written on output/booklet.pdf (6 pages, 128995 bytes).
+c/bera/fvmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></
+usr/share/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texmf-dis
+t/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/pa
+latino/uplri8a.pfb>
+Output written on output/booklet.pdf (6 pages, 144730 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 98 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
