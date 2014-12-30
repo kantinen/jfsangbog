@@ -1,0 +1,3 @@
+Den genererede booklet.pdf har en fejl ift. printeren: Side 6 skal roteres 180
+grader, for ellers printes folderen forkert.  Brug et pdf-program til det såsom
+pdfjam og/eller pdftk og/eller LaTeX.  De andre sider er fine.
