@@ -1,6 +1,6 @@
 BASENAME  = sanghaefte
 BOOKNAME  = booklet
-FILENAME  = sanghaefte15
+FILENAME  = sanghaefte16
 OUTDIR    = $(CURDIR)/output
 OUTFILE   = $(OUTDIR)/$(FILENAME).pdf
 
