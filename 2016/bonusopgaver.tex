@@ -1,0 +1,164 @@
+\section{\huge{Bonusopgaver}}
+
+\emph{I år er bonusopgaverne sat et niveau op i sværhedsgrad.  Til gengæld
+  værdsættes kreative løsninger endnu mere end normalt.}
+
+\subsection{Opgave 0: F\#}
+
+Til et instruktormøde i PoP blev der af uransagelige årsager drukket snaps.  Den
+udleverede F\#-kode for fakultetsfunktionen er i overensstemmelse med denne
+hændelses effekter:
+
+\tiny
+\begin{verbatim}
+let fac n =
+    let mutable f = (n + 1) / 2
+    for i in seq { 1 .. (n - 1) / 2 } do
+        f <- f * ((n + 1) / 2) * ((n + 1) / 2) - f * i * i
+    System.Convert.ToInt32((n = 0)) + ((1 - n % 2) * n + n % 2) * f
+[<EntryPoint>]
+let main [|s|] =
+    printfn "%d! = %d" (System.Int32.Parse s) (fac (System.Int32.Parse s))
+    0
+\end{verbatim}
+\normalsize
+
+Til trods for den anderledes fakultetsfunktionsalgoritme, garanterer en
+nissehuebærende kursusansvarlig at koden skam er korrekt.
+
+\subsubsection{(a)}
+
+Du læser i kursusdatabasen at en ønsket PoP-færdighed er ``at kunne lave mindre
+programmer [...] med overholdelse af god programmeringsskik og -stil'' og indser
+at kodeskik er meget, meget, \emph{meget} vigtigt!
+
+Din opgave er derfor at rydde op i koden, så instruktorerne slipper for at rette
+deres egen kode.  Gør det pænt og overskueligt!
+
+
+\subsubsection{(b)}
+
+Bevis at den givne fakultetsfunktionsalgoritme er korrekt.  \emph{Vink}: Prøv at
+håndkøre \texttt{fac} for små værdier af \texttt{n}.
+
+
+\newpage
+\subsection{Opgave 1: Pipelining (25 point)}
+
+
+``DIKU Basement Semiconductors'' har udtænkt en revolutionær afart af
+MIPS-arkitekturen, hvor pipelinen som beskrives i COD er begavet med en
+hop-forudsiger.
+
+Betragt klassen af programmer hvor $25\%$ af instruktionerne er betingede
+hop-instruktioner og $25\%$ er load-instruktioner; resten er aritmetiske
+instruktioner.  Ydermere, $50\pm 3\%$ af load-instruktioner efterfølges af
+instruktioner der bruger den loadede værdi.  Betragt dog kun klassen af
+programkørsler hvor $50 \pm 3\%$ af hop-instruktionerne tages.
+
+
+\subsubsection{Spørgsmål 1 (5\%)}
+
+Beregn CPI-bidraget fra hop for udførelse af programmer i klassen beskrevet
+foroven, uden en hop-forudsiger.
+
+
+\subsubsection{Spørgsmål 2 (5\%)}
+
+Hop-forudsigeren forudsiger hop med hvad der viser sig er $50 \pm 3\%$
+nøjagtighed.  (Rygtet siger det at der er dén forudsiger der bruges til at
+bestemme karaktererne i Maskinarkitektur.)  Forudsigelsen sker mens
+hop-instruktionen er i ID-trinnet, samtidigt med at ``delay-slot''
+instruktionen hentes i IF-trinnet.  Selve hoppet afgøres i EX-trinnet.
+
+Beregn CPI-bidraget fra hop for udførelse af programmer i klassen beskerevet for
+oven.
+
+
+\subsubsection{Spørgsmål 3 (5\%)}
+
+Beregn CPI-bidraget fra stalls pga. data hazards.
+
+
+\subsubsection{Spørgsmål 4 (5\%)}
+
+Antaget en programlængde på 65K instruktioner, hvad er den samlede CPI for
+sådan en klasse af programmer med, og uden hopforudsigeren?
+
+
+\subsubsection{Spørgsmål 5 (5\%)}
+
+Kan vi klare en større klasse af programmer med samme CPI end den angivet i
+starten af opgaven her?
+
+
+\subsection{Opgave 2: Regulære udtryk}
+
+Din instruktor i Oversættere fik besked på at lave en lille regex-opgave.
+Instruktoren begyndte frejdigt, men efter at have drukket fem af Kantinens lækre
+nye 7,1\% ciders i et forgæves forsøg på at gøre opgaven morsom, kom
+instruktoren i stedet til at copy-paste følgende ikke-komplette udsnit af en
+rapport som vedkommende engang skrev i et projekt om en oversætter:
+
+\begin{quote}
+\subsubsection{If-then-else}
+
+Eftersom oversætterens target ikke understøtter branches godt, er vi
+interesserede i at fjerne dem så aggressivt som muligt fra den interne
+repræsentation.  Internt er branches udtrykt som
+
+\texttt{if} cond \texttt{then} exp$_1$ \texttt{else} exp$_2$
+
+hvor cond er $0$ eller $1$, og returværdien er exp$_1$ hvis cond er $0$, og
+exp$_2$ hvis cond er $1$.
+
+Vi laver derfor denne transforma
+\end{quote}
+
+Bagefter faldt instruktoren i søvn og ramte med næsen Enter-knappen på sit
+tastatur, så den ufuldendte passage blev sendt til alle de studerende på kurset.
+
+
+\subsubsection{(a)}
+
+Færdiggør instruktorens afsnit: Beskriv en transformation der tager et
+if-then-else-udtryk og giver et udtryk der \emph{ikke} indeholder et
+if-then-else-udtryk, men som returnerer det samme for alle mulige inddata.
+Ingen udtryk har sideeffekter.  Ved compile time kendes værdien af \texttt{cond}
+\emph{ikke}.  Skriv det i pseudo-SML.  \emph{Vink}: Husk at
+\texttt{0 + var} er det samme som bare \texttt{var}, og at \texttt{0 * var} er
+det samme som bare \texttt{0}.
+
+
+\subsubsection{(b)}
+
+Beskriv en algoritme der tager et udtryk og returnerer en af to værdier til at
+beskrive enten ``Dette udtryk terminerer.'' eller ``Dette udtryk terminerer
+måske, måske ikke.''.  Hvordan kan du bruge denne algoritme til at fuldende din
+løsning i (a), for hvad er problemet med en naiv (omend umiddelbart korrekt)
+transformation?
+
+
+\subsection{Opgave 3: Hygge-opgaven}
+
+% Uløst problem: Polignac's conjecture
+
+Til en øvelsestime er dine medstuderende lige lovligt næsvise under en
+gennemgang af noget vigtigt.  Din instruktor beslutter derfor at give jer en
+\emph{sjov} opgave fra talteori-feltet, som I vel bare kan løse på 5 minutter!
+Følgende konjektur skrives på tavlen:
+
+\begin{quote}
+  Lad $n$ være et vilkårligt, positivt, lige tal.  Der er nu uendeligt mange
+  tilfælde hvor to fortløbende primtal $p_k$ og $p_{k+1}$ har forskellen $n$,
+  altså at $p_{k+1} - p_k = n$.
+\end{quote}
+
+Bevis eller modbevis denne konjektur.
+
+\vspace{.1in} \textbf{\emph{NB: Der udloddes en flaske snaps til den første som
+    kommer op i baren med en korrekt besvarelse af denne opgave!}}
+
+
+
+\setlength{\parindent}{0mm}

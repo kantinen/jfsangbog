@@ -1,0 +1,4 @@
+Den genererede booklet.pdf havde en fejl sidste år ift. printeren: Side 6 skulle
+roteres 180 grader, for ellers printedes folderen forkert.  Brug et pdf-program
+til det såsom pdfjam og/eller pdftk og/eller LaTeX.  De andre sider var fine.
+Husk det i år.

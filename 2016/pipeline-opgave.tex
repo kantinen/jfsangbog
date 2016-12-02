@@ -1,0 +1,49 @@
+\section*{Opgave 5: Pipelining (25 point)}
+
+``DIKU Basemenet Semiconductors'' har udtænkt en revolutionær afart af MIPS
+arkitekturen, hvor pipelinen som beskrives i \cite{cod5e} er begavet med en
+hop-forudsiger.
+
+Betragt klassen af programmer hvor $25\%$ af instruktionerne er betingede
+hop-instruktioner og $25\%$ er load-instruktioner; resten er aritmetiske
+instruktioner. Ydermere, $50\pm 3\%$ af load-instruktioner efterfølges af
+instruktioner der bruger den loadede værdi. Betragt dog kun klassen af
+programkørsler hvor $50 \pm 3\%$ af hop-instruktionerne tages.
+
+\subsection*{Spørgsmål 1 (5\%)}
+
+Beregn CPI-bidraget fra hop for udførelse af programmer i klassen beskerevet
+for oven, uden en hop forudsiger.
+
+\textbf{Svar:} $37,5 \pm 0,225\%$.
+
+\subsection*{Spørgsmål 2 (5\%)}
+
+Hop-forudsigeren forudsiger hop med hvad der viser sig er $50 \pm 3\%$
+nøjagtighed.  (Rygtet siger det at der er dén forudsiger der bruges til at
+bestemme karakterene i Maskinarkitektur.) Forudsigelsen sker mens
+hop-instruktionen er i ID-trinnet, samtidigt med at ``delay-slot''
+instruktionen hentes i IF-trinnet. Selve hoppet afgøres i EX-trinnet.
+
+Beregn CPI-bidraget fra hop for udførelse af programmer i klassen beskerevet
+for oven.
+
+\textbf{Svar:} $37,5 \pm 0,225\%$.
+
+\subsection*{Spørgsmål 3 (5\%)}
+
+Bereng CPI-bidraget fra stalls pga. data hazards.
+
+\textbf{Svar:} $37,5 \pm 0,225\%$.
+
+\subsection*{Spørgsmål 4 (5\%)}
+
+Antaget en programlængde på 65K instruktioner, hvad er den samlede CPI for
+sådan en klasse af programmer med, og uden hopforudsigeren?
+
+\subsection*{Spørgsmål 5 (5\%)}
+
+Kan vi klare en større klasse af programmer med samme CPI end den angivet i
+starten af opgaven her?
+
+\textbf{Svar}: Ja, for vi kan slippe for antagelsen om programkørsler.

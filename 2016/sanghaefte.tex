@@ -1,0 +1,46 @@
+\documentclass[10pt,a5paper,final,]{memoir}%landscape,final,oneside,openany,twocolumn]{memoir}
+
+\usepackage{abll}
+
+\usepackage[left=3cm, right=3cm, top=2.7cm, bottom=2.7cm]{geometry}
+
+\setlength{\parindent}{0pt}
+\pagestyle{cleared}
+
+\setcounter{secnumdepth}{0}
+\def\thechapter{}
+\setcolsepandrule{7.2cm}{0pt}
+
+
+\newcommand{\songtitle}[1]{\section{\huge{#1}}\vspace*{3mm}}
+
+\usepackage{pstricks}
+\newrgbcolor{abllcolor}{.3 .4 .8}
+\newcommand{\abll}[1]{{\textbf{\abllcolor{[abll: #1]}}}}
+
+
+\begin{document}
+
+\input{forside}
+\newpage
+\input{../sange/imorgenerverdenvor}
+\newpage
+\input{../sange/julesange-2015}
+\newpage
+\emph{I følgende klassiker kan man, hvis man får lov, erstatte ``Moscow ML'' med
+  ``MEGET F SHARP''.}
+\vspace{-5mm}
+\input{../sange/doktrinen}
+\newpage
+\input{../sange/hjemmehackeriet}
+\newpage
+\input{../sange/seminkode}
+\newpage
+\input{../sange/saalaengejeglaeser}
+\newpage
+\input{bonusopgaver}
+\newpage
+\input{bagside}
+
+\end{document}
+
