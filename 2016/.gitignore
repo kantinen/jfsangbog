@@ -3,3 +3,5 @@ sanghaefte.out
 sanghaefte.pdf
 /output
 *.log
+*.pyg
+_minted*

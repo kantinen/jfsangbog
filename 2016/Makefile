@@ -4,7 +4,7 @@ FILENAME  = sanghaefte16
 OUTDIR    = $(CURDIR)/output
 OUTFILE   = $(OUTDIR)/$(FILENAME).pdf
 
-COMPILE   = pdflatex -output-directory=output -file-line-error \
+COMPILE   = pdflatex -shell-escape -output-directory=output -file-line-error \
             -jobname $(FILENAME) $(BASENAME)
 COMPILE2  = pdflatex -output-directory=output -file-line-error \
             -jobname $(BOOKNAME) $(BOOKNAME)
