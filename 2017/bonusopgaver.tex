@@ -1,0 +1,288 @@
+\section{\huge{Bonusopgaver}}
+
+\subsection{Opgave 0: PoP}
+
+Du modtager et brev fra din instruktor:
+
+\begin{quote}
+
+\em
+
+Kære studerende
+
+Jeg er på betalt studieophold på Madeira hvor jeg skal lære at lave
+\sout{honningsnaps} \hspace{1mm} \sout{vin} \hspace{1mm} godt
+undervisningsmateriale.
+
+Vi har derfor desværre ikke penge nok til en fuld F\#-licens fra Microsoft, men
+min fætter Steve Ballmer har givet mig et godt tilbud på en delmængde af
+sproget.
+
+\end{quote}
+
+Hvad?  Du undrer dig over licens-snakken, for blev .Net ikke gjort til fri
+software sidste år?  Og hvad med Mono?  Og det har da altid været gratis?  Til
+trods for dette finder du en serviet og din fyldepen frem og løser opgaven i
+hånden:
+
+\begin{quote}
+
+{\em I denne uges opgave har du altså kun de her tre funktioner til rådighed:}
+
+\begin{minted}[frame=lines,framesep=2mm]{fsharp}
+List.permute : (int -> int) -> 'T list
+               -> 'T list
+List.fold : ('State -> 'T -> 'State)
+            -> 'State -> 'T list -> 'State
+List.nth : 'T list -> int -> 'T
+\end{minted}
+
+{\em Du må desuden heller ikke skrive funktioner der kalder sig selv.
+
+Under disse begrænsninger, skriv en funktion til at sortere elementer:}
+
+\begin{minted}[frame=lines,framesep=2mm]{fsharp}
+sortUnderLicense : 'T list -> 'T list
+\end{minted}
+
+{\em Det er i orden hvis din funktion ikke kan sortere lister med dubletter.
+
+Venlig hilsen\\
+Din instruktor}
+
+\end{quote}
+
+
+\subsection{Opgave 1: CompSys}
+
+Du modtager endnu et brev:
+
+\begin{quote}
+
+{\em Hej du
+
+Opholdet på Madeira er blevet udvidet, fordi min hjemmelavede \sout{vin blev
+muggen} \hspace{1mm} bog blev forsinket i trykken.  Her er din næste opgave så
+per brev.}
+
+\end{quote}
+
+Gisp, altså...  Du finder en serviet og din fyldepen frem og læser videre i
+brevet.
+
+\begin{quote}
+
+{\em Vi har besluttet at Y86 var en for stor mundfuld, og I skal derfor
+retroaktivt lave alle opgaver om i simple logiske designkredsløb.
+
+Du må kun bruge NAND-gates:
+\begin{center}
+\includegraphics[width=.3\textwidth]{img/NAND-ANSI-Labelled}
+\end{center}
+
+En NAND-gate tager to bits inddata (her A og B) og giver én bit uddata (her Q).
+Forholdet kan beskrives med en sandhedstabel:
+
+\begin{center}
+\begin{tabular}{cc|c}
+  A & B & Q\\\hline
+  narj & narj & jeps\\
+  narj & jeps & jeps\\
+  jeps & narj & jeps\\
+  jeps & jeps & narj
+  % 0 & 0 & 1\\
+  % 0 & 1 & 1\\
+  % 1 & 0 & 1\\
+  % 1 & 1 & 0
+\end{tabular}
+\end{center}
+
+Et kredsløb er en samling af NAND-gates, hvor uddata fra en gate kan bruges som
+inddata til en anden gate.  En gates to inddata kan godt være ens, og en gates
+uddata kan godt gå flere steder hen.
+
+\vspace{5mm}
+\textbf{Underopgave 0}
+
+Konstruér et kredsløb med én inddata-bit T og én uddata-bit U.  Hvis T er jeps,
+skal U være narj, og hvis T er narj, skal U være jeps.  Med andre ord skal
+kredsløbet flippe bitten.
+
+\vspace{5mm}
+\textbf{Underopgave 1}
+
+Konstruér et kredsløb med to inddata-bit og to uddata-bit.  Inddataen
+repræsenterer et 2-bit ikke-negativt tal $n$, og uddataen skal repræsentere
+tallet $n + 1$ (eller $0$ hvis der er overløb).  Med andre ord skal kredsløbet
+lægge $1$ til et tal.}
+\end{quote}
+
+Det lyder da ikke så slemt!  Du tegner løs på dine servietter.
+
+\begin{quote}
+
+{\em
+
+\textbf{Underopgave 2}
+
+Implementér en NAND-kredsløbs-simulator i C.  
+
+Husk at indentere med mellemrum og ikke lave for lange linjer.
+
+Hejhej}
+
+\end{quote}
+
+% Brug gerne denne headerfil:}
+
+% \end{quote}
+% \newpage
+% {\tiny
+% \begin{minted}[frame=lines,framesep=2mm]{c}
+% // Hver ledning har et unikt ID som er et positivt heltal.
+% typedef size_t id_t;
+
+% // Hver NAND-gate har to inputs og en output.
+% typedef struct {
+%   id_t input_ids[2];
+%   id_t output_id;
+% } nand_t;
+
+% // En bit kan enten være "narj" eller "jeps".
+% typedef enum {
+%   narj, // "0"
+%   jeps  // "1"
+% } bit_t;
+
+% // Beregn et NAND-udtryk og returnér dets resultat.
+% bit_t nand(bit_t input0, bit_t input1);
+
+% // Find alle frie `output_id'-værdier, dvs. værdier der *ikke* er inputs til
+% // gates.  `gates' er et sted i hukommelsen med `gates_length' elementer.  Skriv
+% // den sorterede liste af frie `output_id'-værdier til det præallokerede sted i
+% // hukommelsen `dest_free_output_ids' (garanteret til at have plads til mindst
+% // `gates_length' elementer), og returnér antallet af skrevne id'er.
+% size_t get_free_output_ids(id_t* dest_free_output_ids,
+%                            nand_t* gates, size_t gates_length);
+
+% // Find værdien for ledningen `id'.  `gates' og `gates_length' har samme
+% // betydning som i `get_free_output_ids'.  `get_input' er en funktionspeger som
+% // skal kaldes hvis en ledning ikke er output fra en gate, men i stedet er fri.
+% // Returnér den fundne værdi.
+% bit_t evaluate_id(nand_t* gates, size_t gates_length,
+%                   size_t (*get_input)(size_t), id_t id);
+
+% // Find værdierne for alle frie outputs.  Skriv dem til det præallokerede sted i
+% // hukommelsen `outputs' (garanteret til at have plads til mindst `gates_length'
+% // elementer).
+% void evaluate_outputs(nand_t* gates, size_t gates_length,
+%                       size_t (*get_input)(size_t), bit_t* outputs);
+% \end{minted}
+% }
+
+
+\subsection{Opgave 2: AP}
+
+\begin{quote}
+
+{\em Hej igen
+
+Jeg sidder her på stranden og funderer over DIKU.  Har du lagt mærke til at
+monader har en stor meme-fremkaldende effekt på kandidatstudiet?  Jeg ville
+næsten ønske at min \sout{giftige vin} \hspace{1mm} gode lærebog havde samme
+effekt.  Suk\ldots
+
+Monader beskæftiger sig med to funktioner:}
+
+\vspace{-4mm}
+\begin{minted}[frame=lines,framesep=2mm]{haskell}
+return :: a -> m a
+bind :: m a -> (a -> m b) -> m b
+\end{minted}
+\vspace{-3mm}
+{\em hvor \texttt{m} er en parametriseret datatype.
+
+Udover at typerne skal passe, bør funktionerne også overholde monadelovene:}
+
+\begin{itemize}
+\item Venstre identitet:\\\texttt{bind (return a) f ≡ f a}
+\item Højre identitet: \texttt{bind m return ≡ m}
+\item Associativitet: \texttt{bind (bind m f) g\\≡ bind m (\textbackslash x -> bind (f x) g)}
+\end{itemize}
+
+{\em Givet følgende parametriserede datatype:}
+\vspace{-4mm}
+\begin{minted}[frame=lines,framesep=2mm]{haskell}
+data Option a = Some a | None
+\end{minted}
+\vspace{-2mm}
+{\em bevis da at følgende erklæringer af \texttt{return} og \texttt{bind} overholder
+monadelovene:}
+\vspace{-4mm}
+\begin{minted}[frame=lines,framesep=2mm]{haskell}
+return a = Some a
+bind (None) _ = None
+bind (Some a) f = f a
+\end{minted}
+\vspace{2mm}
+{\em Med ønsker om held og lykke\\
+Din instruktor}
+
+\end{quote}
+
+
+\subsection{Opgave 3: Specialet}
+
+% Problem: X + Y sorting
+
+Det er mandag.  Du skal finde en specialevejleder.  Der er et brev i din
+postkasse?
+
+\begin{quote}
+
+{\em Hej!
+
+Min \sout{vin} \hspace{1mm} bog blev endelig god, så nu er jeg på vej hjem.  Jeg
+har skrevet under på din specialekontrakt, og her er det problem du skal bruge
+de næste seks måneder på:
+}
+
+\end{quote}
+
+\textbf{Hvilken} specialekontrakt?  Du har da ikke skrevet under på noget?
+Eller...  Der var den aften på Caféen?.
+
+\begin{quote}
+
+{\em Lad $X$ og $Y$ være endelige mængder.  Sortér alle par
+$(x, y) \in X \times Y$ efter nøglen $x + y$.
+
+Hvis du for eksempel sætter $X = \{4, 1\}$ og $Y = \{2, 3\}$, så skal du sortere
+parrene $(4, 2)$, $(4, 3)$, $(1, 2)$ og $(1, 3)$ via nøglerne $4 + 2$, $4 + 3$,
+$1 + 2$ og $1 + 3$.  Du ender med denne sorterede liste:
+\vspace{-1mm}
+\begin{align*}
+[(1, 2), (1, 3), (4, 2), (4, 3)].
+\end{align*}
+\vspace{-1mm}
+I det generelle tilfælde er der altså $\left| X \right| \cdot \left| Y \right|$
+elementer at sortere.  Antag at $\left| X \right| = \left| Y \right| = n$.  Hvis
+du bruger almindelig sammenligningssortering, kan du så sortere med køretiden
+\begin{align*}
+  \mathcal{O}\left( n^2\log\left( n^2 \right) \right)
+  = \mathcal{O}\left( n^2 \cdot 2 \log\left( n \right) \right)
+  = \mathcal{O}\left( n^2 \log\left( n \right) \right)
+\end{align*}
+Jeg tror dog at man kan lave en sorteringsalgoritme med tidskompleksitet
+$\mathcal{O}\left( n^2 \right)$.  \textbf{Din opgave:} Lav en asymptotisk
+hurtigere sorteringsalgoritme end
+$\mathcal{O}\left( n^2 \log\left( n \right) \right)$, eller bevis at det er
+umuligt.
+
+Ses til forsvaret!
+}
+
+\end{quote}
+\vspace{-1mm}
+\textbf{\emph{NB: Der udloddes en flaske snaps til den første som kommer op i
+baren med en korrekt besvarelse af denne opgave!}}
