@@ -20,9 +20,36 @@
 
 ...
 
-\subsection{Den svære opgave}
+\subsection{Den nemme opgave}
 
-...
+% The Collatz conjecture
+
+Her er en funktion for et vilkårligt tal $n$:
+\begin{align*}
+f(n) = \begin{cases}
+n/2 &\text{hvis }n\text{ er lige}\\
+3n + 1 &\text{hvis }n\text{ er ulige}\\
+\end{cases}
+\end{align*}
+For eksempel er $f(10) = 5$ og $f(7) = 22$.
+
+Her er en talfølge -- baseret på funktionen $f$ -- der begynder med et
+vilkårligt tal $n$:
+\begin{align*}
+a_i = \begin{cases}
+n &\text{når }i = 0\\
+f(a_{i - 1}) &\text{når }i > 0\\
+\end{cases}
+\end{align*}
+Hvis vi for eksempel sætter $n = 12$, får vi talfølgen
+$a_0 = 12, a_1 = 6, a_2 = 3, a_3 = 10, a_4 = 5, a_5 = 16, a_6 = 8, a_7 = 4, a_8
+= 2, a_9 = 1$.  Vi stopper med at vise en talfølge når den når tallet $1$, for
+$f(f(f(1))) = 1$ (vis dette), så den vil blot gentage sig.
+
+\textbf{Din opgave:} Bevis eller modbevis følgende formodning:
+\begin{quote}
+Ligemeget hvilket $n$ der vælges, vil talfølgen altid nå tallet $1$.
+\end{quote}
 
 \textbf{\emph{NB: Der udloddes en flaske snaps til den første som kommer op i
 baren med en korrekt besvarelse af denne opgave!}}
