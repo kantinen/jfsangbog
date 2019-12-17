@@ -1,0 +1,41 @@
+\documentclass[10pt,a5paper,final,]{memoir}%landscape,final,oneside,openany,twocolumn]{memoir}
+\usepackage{fancyvrb}
+
+\usepackage{abll}
+
+\usepackage[left=3cm, right=3cm, top=2.7cm, bottom=2.7cm]{geometry}
+\usepackage{vwcol}
+
+\setlength{\parindent}{0pt}
+\pagestyle{cleared}
+
+\setcounter{secnumdepth}{0}
+\def\thechapter{}
+\setcolsepandrule{7.2cm}{0pt}
+
+
+\newcommand{\songtitle}[1]{\section{\huge{#1}}\vspace*{3mm}}
+
+\usepackage{pstricks}
+\newrgbcolor{abllcolor}{.3 .4 .8}
+\newcommand{\abll}[1]{{\textbf{\abllcolor{[abll: #1]}}}}
+
+
+\begin{document}
+
+\input{forside}
+\newpage
+\input{../sange/imorgenerverdenvor}
+\newpage
+\input{../sange/doktrinen.tex}
+\newpage
+\input{../sange/julesange-2018}
+\newpage
+\input{../sange/hjemmehackeriet}
+\newpage
+\input{bonusopgaver}
+\newpage
+\input{bagside}
+
+\end{document}
+
