@@ -100,34 +100,39 @@ void køb_en_cola() {
 Antag at koden køres samtidigt af flere brugere.  Lokalisér kapløbsstriden og
 reparér den med en lås.
 
-\textbf{Avanceret:} Hvordan kunne du løse dette problem ved brug af DCR grafer?
+\textbf{Diskussion:} Føler du dig bedre rustet til opgaven efter ACS?
 
 \newpage
 
-% Den skægge opgave lavet af Niels
 \subsection{Den skægge opgave}
 
-Preben har fået et lækkert $1 \times 1$ stykke chokolade i Julagave. Preben er
-dog en flink fyr, så han vil gerne dele sin chokolade med sine venner.
-Da Preben er en populær fyr, har han igennem sin tid på DIKU, fået uendelige
-venner (Ja, så mange starter der hvert år\ldots).\\
-\noindent Han vil gerne beholde halvdelen ($\frac{1}{1} \times \frac{1}{2}$) til
-sig selv.
-Derefter vil han gerne give sin bedste ven et stykke der er $\frac{1}{2} \times
-\frac{1}{3}$. Han har nøge rangeret, hvor gode venner han er med hver person.
-Han vil derfor give $\frac{1}{k} \times \frac{1}{k + 1}$ stykke chokolade, til
-sin $k$ bedste ven.\\
-
-
-\textbf{Din opgave:}
-\begin{quote}
-\noindent Kan alle hans venner få et sykke af chokoladen, eller når Preben at
-løbe tør, før alle har fået?
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{preben.png}
-\end{figure}
-\end{quote}
+Mentorerne har bagt pandekager i Kantinen og vil dele ud af dem. De er
+dog blevet enige (efter at have set lidt for meget Rasmus Klump) om at de skal
+sættes dem i ét tårn. Da de har bagt for mange pandekager er de
+dog havnet med et problem; de har ikke sorteret deres tårn efter størrelse,
+hvilket forårsager ustabilitet i tårnet.
+\begin{center}
+\includegraphics[width=0.48\textwidth]{figures/pandekager.png}
+\end{center}
+Det er dit job at hjælpe mentorerne med at sortere dem. Til hjælp har du én
+spatel, som du kan indsætte et sted i stakken af pandekage og flippe alle
+pandekagerne over spatlen.\\
+\textbf{Lav en korrekt sorteingsalogritme givet præmisserne og vis at den
+fungerer i polynomiel tid:}\\
+KRISE! Efter at have flippet alle pandekagerne indser du, at den ene side af
+alle pandekagerne er brændt. Nu vil folk ikke have deres pandekager. Heldigvis
+er mentorerne vandt til brændt mad og de foreslår derfor at placere den brændte
+side nedad, så folk ikke kan se den inden det er for sent.\\
+\textbf{Lav en algoritme som sorterer og placerer de brændte sider nedad og vis
+den fungerer i polynomiel tid:}\\
+% Kopieret fra 2012
+% Find et tal $n$ (eller vis, at intet findes), således at følgende ligning
+% holder
+% \[
+%     \sum_{d|n} d = 2n + 1\ .
+% \]
+%
+% Altså summen af $n$s divisorer $\sigma(n)$ skal være lige $2n+1$.\\
 
 \textbf{\emph{NB:\@ Der udloddes en flaske snaps til den første som kommer op i
 baren med en korrekt besvarelse af denne opgave!}}
